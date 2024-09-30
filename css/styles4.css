@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+html, body {
+    height: 99%;
+}
+
+html, body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100vw;  
+    height: 100vh; 
+}
+
+.fontt {
+    width: 100%;
+    align-items: center;
+    margin-left: 96.5%;
+    font-weight: bold;
+    font-style: italic;
+    opacity: 40px;
+    margin-top: 20px;
+}
+
+.fonttt {
+    width: 150%;
+    align-items: center;
+    margin-left: 137%;
+    font-weight:200;
+    font-style: italic;
+    opacity: 40px;
+    margin-bottom: 50px;
+}
+
+html {
+   
+    transform: scale(0.82);
+    transform-origin: 0 0;
+    width: 121.95%; 
+    height: 121.95%; 
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    align-items: center;
+    justify-content: center; /* Memastikan konten tetap di tengah secara vertikal */
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/img/WhatsApp Image 2024-09-25 at 03.00.38_05c719d1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+.navbar {
+    background-color: rgba(30, 30, 30, 0);
+    padding: 0rem 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    z-index: 1000;
+    box-shadow: none;
+}
+
+.main-menu {
+    list-style: circle;
+    text-align: center;
+    padding-left: 0;
+    font-style: italic;
+    margin-left: 280px;
+    
+}
+
+.pt{
+    height: 230px;
+    width: 230px;
+    margin-left: 55.9%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 25px 10px rgba(74, 74, 74, 0.825);
+}
+.navbar .navbar-brand {
+    color: #f0f0f0;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-style: italic;
+    margin-bottom: 0; 
+    align-self: flex-end;
+}
+
+.sosmed{
+    display: flex;
+    align-items: center;
+    margin-left: 240px;
+    margin-bottom: 20px;
+}
+
+.sosmed>li{
+    margin: 1px 1px 1px 16px;
+    font-weight: 600;
+    font-size: 31px;
+    list-style-type: none;
+}
+
+.sosmed>li>a{
+    color: white;
+    text-decoration: none;
+}
+
+.logyt{
+    height: 50px;
+    width: 50px;
+    
+}
+
+.logig{
+    height: 45px;
+    width: 45px;
+}
+
+.loggit{
+    height: 70px;
+    width: 70px;
+}
+
+.logtt{
+    height: 50px;
+    width: 50px;
+}
+
+.logfb{
+    height: 50px;
+    width: 50px;
+}
+
+.navbar-toggler {
+    background-color: transparent;
+    border: none;
+}
+
+.navbar-toggler span {
+    font-size: 1.25rem;
+    color: #f0f0f0;
+}
+
+.menu{
+    width: 100%;
+    align-items: center;
+}
+
+
+
+.main-menu li {
+    font-size: 1.4rem;
+    margin: 1rem 0;
+}
+
+.main-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.main-menu a:hover {
+    color: #ff5722;
+    animation: alternate;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#home h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    letter-spacing: 2px;
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+}
+
+#home p {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #cccccc;
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    text-align: center;
+    padding: 0.5rem 0; 
+    height: 30px; 
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    line-height: 0px;
+    font-size: medium;
+}
+
+button {
+    background-color: #ff5722;
+    color: #f0f0f0;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.logyt, .logig, .loggit, .logtt, .logfb {
+    transition: transform 0.3s ease;
+}
+
+.logyt:hover, .logig:hover, .loggit:hover, .logtt:hover, .logfb:hover {
+    transform: scale(1.2);
+}
+
+button:hover {
+    background-color: #ff7849;
+}
+
+@media (max-width: 768px) {
+    #home h1 {
+        font-size: 2rem;
+    }
+
+    #home p {
+        font-size: 1rem;
+    }
+}
