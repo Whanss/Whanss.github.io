@@ -92,9 +92,9 @@ body::before {
 }
 
 .pt{
-    height: 230px;
+    height: 235px;
     width: 230px;
-    margin-left: 55.9%;
+    margin-left: 55.5%;
     border-radius: 20px;
     box-shadow: 0px 0px 25px 10px rgba(74, 74, 74, 0.825);
 }
