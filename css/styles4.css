@@ -94,8 +94,8 @@ body::before {
 .pt{
     height: 235px;
     width: 230px;
-    margin-left: 55.5%;
-    border-radius: 20px;
+    margin-left: 57%;
+    border-radius: 200px;
     box-shadow: 0px 0px 25px 10px rgba(74, 74, 74, 0.825);
 }
 .navbar .navbar-brand {
@@ -135,6 +135,7 @@ body::before {
 .logig{
     height: 45px;
     width: 45px;
+    margin-right: -11px;
 }
 
 .loggit{
@@ -145,6 +146,7 @@ body::before {
 .logtt{
     height: 50px;
     width: 50px;
+    margin-left: -11px;
 }
 
 .logfb{
