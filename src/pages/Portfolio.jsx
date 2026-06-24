@@ -1,7 +1,7 @@
-import { techStack, profile } from '../data/profile'
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '../components/ui/Card'
-import { getTechIcon } from '../components/techIcons'
+import { profile } from '../data/profile'
+import { Card, CardContent } from '../components/ui/Card'
 import { SiGithub } from 'react-icons/si'
+import { FaLaptopCode, FaPaintBrush, FaDatabase } from 'react-icons/fa'
 
 // Placeholder project — ganti dengan project asli di profile.js nanti
 const projects = [
@@ -51,38 +51,48 @@ export default function Portfolio() {
         ))}
       </div>
 
-      {/* Tech Stack */}
-      <Card className="mt-12 animate-fade-in-up opacity-0 [animation-delay:300ms]">
-        <CardHeader>
-          <CardTitle className="text-center">Tech Stack</CardTitle>
-          <CardDescription className="text-center">
-            Teknologi yang saya gunakan dan pelajari
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <div className="flex flex-wrap justify-center gap-3">
-            {techStack.map((tech) => {
-              const Icon = getTechIcon(tech.icon)
-              return (
-                <div
-                  key={tech.name}
-                  className="group flex items-center gap-2 rounded-lg border border-white/5 bg-white/[0.03] px-4 py-2.5 transition-all duration-300 hover:-translate-y-0.5 hover:border-white/15"
-                >
-                  {Icon && (
-                    <Icon
-                      className="h-5 w-5 transition-colors"
-                      style={{ color: tech.color }}
-                    />
-                  )}
-                  <span className="text-sm font-medium text-bone-light group-hover:text-white transition-colors">
-                    {tech.name}
-                  </span>
-                </div>
-              )
-            })}
-          </div>
-        </CardContent>
-      </Card>
+      {/* Layanan / Services */}
+      <div className="mt-16 animate-fade-in-up opacity-0 [animation-delay:300ms]">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl font-bold text-bone-light">Solusi Digital</h2>
+          <p className="text-sm text-bone-muted mt-2">Layanan yang bisa saya berikan untuk mewujudkan ide Anda</p>
+        </div>
+        
+        <div className="grid gap-4 sm:grid-cols-3">
+          <Card className="group relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-lg hover:shadow-blue-500/10">
+            <div className="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-blue-500/10 blur-2xl transition-all duration-500 group-hover:bg-blue-500/20 group-hover:scale-150 pointer-events-none" />
+            <CardContent className="p-6 text-center relative z-10">
+              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-500/10 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
+                <FaLaptopCode className="h-7 w-7 text-blue-400" />
+              </div>
+              <h3 className="mb-2 font-bold text-bone-light">Web Development</h3>
+              <p className="text-xs leading-relaxed text-bone-muted">Membangun website modern yang interaktif, responsif, dan berkinerja tinggi menggunakan React & ekosistem modern.</p>
+            </CardContent>
+          </Card>
+          
+          <Card className="group relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-pink-500/30 hover:shadow-lg hover:shadow-pink-500/10">
+            <div className="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-pink-500/10 blur-2xl transition-all duration-500 group-hover:bg-pink-500/20 group-hover:scale-150 pointer-events-none" />
+            <CardContent className="p-6 text-center relative z-10">
+              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-pink-500/10 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6">
+                <FaPaintBrush className="h-7 w-7 text-pink-400" />
+              </div>
+              <h3 className="mb-2 font-bold text-bone-light">UI/UX Design</h3>
+              <p className="text-xs leading-relaxed text-bone-muted">Merancang antarmuka yang memanjakan mata dan memberikan pengalaman navigasi yang mulus serta intuitif.</p>
+            </CardContent>
+          </Card>
+          
+          <Card className="group relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/30 hover:shadow-lg hover:shadow-emerald-500/10">
+            <div className="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-emerald-500/10 blur-2xl transition-all duration-500 group-hover:bg-emerald-500/20 group-hover:scale-150 pointer-events-none" />
+            <CardContent className="p-6 text-center relative z-10">
+              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-500/10 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
+                <FaDatabase className="h-7 w-7 text-emerald-400" />
+              </div>
+              <h3 className="mb-2 font-bold text-bone-light">Database & API</h3>
+              <p className="text-xs leading-relaxed text-bone-muted">Mendesain arsitektur basis data yang efisien dan aman serta mengintegrasikan API untuk fungsionalitas kompleks.</p>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
 
       {/* CTA GitHub */}
       <div className="mt-10 text-center animate-fade-in opacity-0 [animation-delay:500ms]">

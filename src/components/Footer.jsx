@@ -10,9 +10,6 @@ export default function Footer() {
         <p className="text-sm text-bone-muted">
           &copy; {year} {profile.name}. All rights reserved.
         </p>
-        <p className="mt-1 text-xs text-bone-muted/70">
-          Dibangun dengan React + Vite + Tailwind CSS
-        </p>
       </div>
     </footer>
   )
