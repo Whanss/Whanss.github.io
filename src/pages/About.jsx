@@ -1,7 +1,7 @@
 import { motion } from 'motion/react'
-import { profile, about, education, interests, awards, techStack } from '../data/profile'
+import { profile, about, interests, techStack } from '../data/profile'
 import { getTechIcon } from '../components/techIcons'
-import { FaGraduationCap, FaCode, FaTrophy, FaHeart, FaBriefcase, FaUserAstronaut } from 'react-icons/fa'
+import { FaCode, FaHeart, FaBriefcase, FaUserAstronaut } from 'react-icons/fa'
 
 export default function About() {
   const containerVariants = {
@@ -99,66 +99,22 @@ export default function About() {
           <p className="relative z-10 text-sm leading-relaxed text-bone-muted">{about.experience}</p>
         </motion.div>
 
-        {/* 4. Pendidikan (Span 1 kolom) - Vertical Timeline */}
-        <motion.div variants={itemVariants} className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] p-6 backdrop-blur-sm transition-all hover:border-purple-500/30 md:col-span-1">
-          <FaGraduationCap className="absolute -right-4 -bottom-4 h-28 w-28 opacity-5 transition-transform duration-700 group-hover:-rotate-12 group-hover:scale-110 pointer-events-none" />
-          <h2 className="mb-6 flex items-center gap-2 text-lg font-bold text-bone-light">
-            <span className="h-2 w-2 rounded-full bg-purple-500 shadow-[0_0_8px_#a855f7]" />
-            Pendidikan
-          </h2>
-          <div className="relative space-y-6 pl-4 before:absolute before:left-[7px] before:top-2 before:bottom-2 before:w-[2px] before:bg-gradient-to-b before:from-purple-500 before:to-transparent">
-            {education.map((e, i) => (
-              <div key={i} className="relative">
-                {/* Glowing Dot */}
-                <div className="absolute -left-[21px] top-1.5 h-3 w-3 rounded-full border-2 border-ink-900 bg-purple-500 shadow-[0_0_8px_#a855f7] transition-transform duration-300 group-hover:scale-125" />
-                <h3 className="font-bold text-bone-light leading-tight">{e.institution}</h3>
-                {e.major && <p className="mt-1 text-xs text-bone-muted">{e.major}</p>}
-                <span className="mt-2 inline-block rounded border border-purple-500/20 bg-purple-500/10 px-2 py-0.5 text-[9px] font-bold tracking-wider text-purple-400">
-                  {e.period}
-                </span>
-              </div>
-            ))}
+        {/* 4. Minat (Span 3 kolom) */}
+        <motion.div variants={itemVariants} className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] p-6 backdrop-blur-sm transition-all hover:-translate-y-1 hover:border-pink-500/30 hover:shadow-xl hover:shadow-black/50 md:col-span-3 flex flex-col sm:flex-row items-center gap-6">
+          <div className="absolute -right-4 -bottom-4 h-32 w-32 rounded-full bg-pink-500/10 blur-3xl transition-all duration-500 group-hover:bg-pink-500/20 group-hover:scale-150 pointer-events-none" />
+          
+          <div className="flex items-center gap-4 shrink-0">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-pink-500/10 transition-transform duration-500 group-hover:scale-110 group-hover:animate-pulse">
+              <FaHeart className="h-6 w-6 text-pink-500" />
+            </div>
+            <h2 className="text-lg font-bold text-bone-light whitespace-nowrap">Minat & Hobi</h2>
           </div>
-        </motion.div>
-
-        {/* 5. Pencapaian (Span 1 kolom) */}
-        <motion.div variants={itemVariants} className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] p-6 backdrop-blur-sm transition-all hover:-translate-y-1 hover:border-yellow-500/30 hover:shadow-xl hover:shadow-black/50 md:col-span-1">
-          <div className="absolute -right-4 -bottom-4 h-24 w-24 rounded-full bg-yellow-500/10 blur-2xl transition-all duration-500 group-hover:bg-yellow-500/20 group-hover:scale-150 pointer-events-none" />
-          <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-yellow-500/10 transition-transform duration-500 group-hover:rotate-12 group-hover:scale-110">
-            <FaTrophy className="h-6 w-6 text-yellow-500" />
-          </div>
-          <h2 className="mb-4 text-lg font-bold text-bone-light">Pencapaian</h2>
-          <div className="relative z-10">
-            {awards.length === 1 && awards[0].includes('Sedang dalam proses') ? (
-              <div className="rounded-xl border border-dashed border-white/10 bg-black/20 p-4 text-center transition-colors group-hover:border-yellow-500/30 group-hover:bg-yellow-500/5">
-                <span className="block text-xl">🌱</span>
-                <p className="mt-2 text-xs leading-relaxed text-bone-muted">{awards[0]}</p>
-              </div>
-            ) : (
-              <ul className="space-y-3">
-                {awards.map((a, i) => (
-                  <li key={i} className="flex items-start gap-3 text-sm text-bone-muted">
-                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-yellow-500 shadow-[0_0_5px_#eab308]" />
-                    <span className="leading-relaxed">{a}</span>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-        </motion.div>
-
-        {/* 6. Minat (Span 1 kolom) */}
-        <motion.div variants={itemVariants} className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] p-6 backdrop-blur-sm transition-all hover:-translate-y-1 hover:border-pink-500/30 hover:shadow-xl hover:shadow-black/50 md:col-span-1">
-          <div className="absolute -right-4 -bottom-4 h-24 w-24 rounded-full bg-pink-500/10 blur-2xl transition-all duration-500 group-hover:bg-pink-500/20 group-hover:scale-150 pointer-events-none" />
-          <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-pink-500/10 transition-transform duration-500 group-hover:scale-110 group-hover:animate-pulse">
-            <FaHeart className="h-6 w-6 text-pink-500" />
-          </div>
-          <h2 className="mb-4 text-lg font-bold text-bone-light">Minat</h2>
-          <div className="relative z-10 flex flex-wrap gap-2">
+          
+          <div className="relative z-10 flex flex-wrap justify-center sm:justify-start gap-3 w-full">
             {interests.map((item) => (
               <span
                 key={item}
-                className="rounded-xl border border-white/10 bg-black/30 px-3 py-1.5 text-xs font-medium text-bone-light transition-all duration-300 hover:-translate-y-1 hover:border-pink-500/40 hover:bg-pink-500/10 hover:text-pink-400 hover:shadow-[0_4px_10px_rgba(236,72,153,0.2)]"
+                className="rounded-xl border border-white/10 bg-black/30 px-4 py-2 text-xs font-medium text-bone-light transition-all duration-300 hover:-translate-y-1 hover:border-pink-500/40 hover:bg-pink-500/10 hover:text-pink-400 hover:shadow-[0_4px_10px_rgba(236,72,153,0.2)]"
               >
                 {item}
               </span>

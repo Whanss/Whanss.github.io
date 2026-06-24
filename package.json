@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Portfolio Ikhwan Maulana Ivansyah - Vite + React + Tailwind CSS",
+  "description": "Portfolio Nanda - Vite + React + Tailwind CSS",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

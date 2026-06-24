@@ -5,21 +5,17 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    /* Mengecilkan skala layar/website menjadi 90% (0.9) secara proporsional */
+    font-size: 90%; 
+  }
+
+  * {
+    cursor: none !important;
   }
 
   body {
-    @apply bg-ink-800 text-bone font-sans antialiased;
-    /* Background image dipertahankan sebagai texture halus, overlay lebih gelap
-       agar card glassmorphism tetap terlihat jelas */
-    background-image: linear-gradient(
-        rgba(15, 15, 15, 0.88),
-        rgba(15, 15, 15, 0.94)
-      ),
-      url('/img/WhatsApp Image 2024-09-25 at 03.00.38_05c719d1.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+    @apply bg-[#0d1117] text-bone font-sans antialiased;
+    /* Background animation is handled by AnimatedBackground component */
   }
 
   /* Scrollbar styling untuk tema gelap */
@@ -51,5 +47,58 @@
   /* Link accent */
   .link-accent {
     @apply text-ember transition-colors duration-300 hover:text-ember-light;
+  }
+}
+
+@layer utilities {
+  @keyframes blob {
+    0% { transform: translate(0px, 0px) scale(1); }
+    33% { transform: translate(30px, -50px) scale(1.1); }
+    66% { transform: translate(-20px, 20px) scale(0.9); }
+    100% { transform: translate(0px, 0px) scale(1); }
+  }
+  .animate-blob {
+    animation: blob 7s infinite alternate;
+  }
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+  .animation-delay-6000 {
+    animation-delay: 6s;
+  }
+
+  @keyframes float-up {
+    0% {
+      transform: translateY(110vh) rotate(0deg);
+    }
+    100% {
+      transform: translateY(-20vh) rotate(360deg);
+    }
+  }
+  .animate-float-up {
+    animation: float-up linear infinite;
+  }
+
+  @keyframes timeline-flow {
+    0% {
+      top: -30%;
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      top: 100%;
+      opacity: 0;
+    }
+  }
+  .animate-timeline-flow {
+    animation: timeline-flow 4s ease-in-out infinite;
   }
 }

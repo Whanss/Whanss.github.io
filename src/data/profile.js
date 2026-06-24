@@ -9,13 +9,13 @@
 
 // --- Profil dasar ---
 export const profile = {
-  name: 'Ikhwan Maulana Ivansyah',
-  nickname: 'Ikhwan',
+  name: 'Nanda',
+  nickname: 'Nanda',
   role: 'Mahasiswa Sistem Informasi & Developer',
   nim: 'SI20230016',
   program: 'Sistem Informasi',
   college: 'STMIK Lombok',
-  birthDate: '13 Juni 2005',
+  birthDate: '13 Juni 2004',
   tagline: 'Belajar, membangun, dan terus berkembang.',
   // Path relatif dari public/ — gambar ada di public/img/
   photo: '/img/abcd.jpg',
@@ -24,9 +24,9 @@ export const profile = {
 // --- Narasi personal ---
 export const about = {
   intro:
-    'Halo! Saya Ikhwan Maulana Ivansyah, biasa dipanggil Ikhwan. ' +
+    'Halo! Saya Nanda. ' +
     'Seorang mahasiswa Sistem Informasi yang antusias dengan dunia ' +
-    'pemrograman dan teknologi. Lahir di Lombok Tengah, 13 Juni 2005.',
+    'pemrograman dan teknologi. Lahir di Lombok Tengah, 13 Juni 2004.',
 
   // Teks lama "Gada pengalaman. kaya nya." → dipoles jadi:
   experience:
@@ -97,7 +97,7 @@ export const contact = {
 // --- Tautan media sosial ---
 // icon: key untuk SocialLinks component (SVG inline)
 export const socials = [
-  { name: 'YouTube', url: 'https://www.youtube.com/@naanssdaa', icon: 'youtube' },
+  { name: 'YouTube', url: 'https://www.youtube.com/@naandayoniga', icon: 'youtube' },
   { name: 'Instagram', url: 'https://www.instagram.com/ikhwnda_/', icon: 'instagram' },
   { name: 'GitHub', url: 'https://github.com/Whanss', icon: 'github' },
   { name: 'TikTok', url: 'https://www.tiktok.com/@envyruu', icon: 'tiktok' },
@@ -118,14 +118,14 @@ export const navItems = [
 // icon: key react-icons yang dipetakan di TechJourneyCard.
 // color: warna brand resmi tiap teknologi.
 export const learningPath = [
-  { name: 'C++', icon: 'cpp', color: '#00599C', year: 'Awal', note: 'Logika & dasar pemrograman' },
-  { name: 'HTML/CSS/JS', icon: 'web', color: '#E34F26', year: 'Native', note: 'Front-end fundamental' },
-  { name: 'PHP + MariaDB', icon: 'php', color: '#777BB4', year: 'Database', note: 'PHP native + database' },
-  { name: 'Supabase', icon: 'supabase', color: '#3FCF8E', year: 'Backend', note: 'Backend-as-a-Service' },
-  { name: 'Laravel', icon: 'laravel', color: '#FF2D20', year: 'Framework', note: 'PHP framework modern' },
-  { name: 'Vue', icon: 'vue', color: '#42B883', year: 'Frontend', note: 'Progressive framework' },
-  { name: 'Next.js', icon: 'next', color: '#FFFFFF', year: 'React', note: 'React meta-framework' },
-  { name: 'React', icon: 'react', color: '#61DAFB', year: 'Sekarang', note: 'Library UI component' },
+  { name: 'C++', icon: 'cpp', color: '#00599C', year: 'Awal', note: 'Logika & dasar pemrograman', url: 'https://isocpp.org/' },
+  { name: 'HTML/CSS/JS', icon: 'web', color: '#E34F26', year: 'Native', note: 'Front-end fundamental', url: 'https://developer.mozilla.org/en-US/docs/Web' },
+  { name: 'PHP + MariaDB', icon: 'php', color: '#777BB4', year: 'Database', note: 'PHP native + database', url: 'https://www.php.net/' },
+  { name: 'Supabase', icon: 'supabase', color: '#3FCF8E', year: 'Backend', note: 'Backend-as-a-Service', url: 'https://supabase.com/' },
+  { name: 'Laravel', icon: 'laravel', color: '#FF2D20', year: 'Framework', note: 'PHP framework modern', url: 'https://laravel.com/' },
+  { name: 'Vue', icon: 'vue', color: '#42B883', year: 'Frontend', note: 'Progressive framework', url: 'https://vuejs.org/' },
+  { name: 'Next.js', icon: 'next', color: '#FFFFFF', year: 'React', note: 'React meta-framework', url: 'https://nextjs.org/' },
+  { name: 'React', icon: 'react', color: '#61DAFB', year: 'Sekarang', note: 'Library UI component', url: 'https://react.dev/' },
 ]
 
 // --- Lagu favorit & Playlist ---
@@ -170,11 +170,11 @@ export const jojiPlaylist = [
 
 // --- Teknologi untuk Portfolio Ini ---
 export const portfolioTech = [
-  { name: 'React', icon: 'react', color: '#61DAFB', desc: 'Library UI komponen', logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg' },
-  { name: 'Tailwind', icon: 'tailwind', color: '#38B2AC', desc: 'Styling responsif', logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg' },
-  { name: 'Vite', icon: 'vite', color: '#646CFF', desc: 'Build tool cepat', logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg' },
-  { name: 'React Router', icon: 'react', color: '#CA4245', desc: 'Navigasi SPA', logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/reactrouter/reactrouter-original.svg' },
-  { name: 'Motion', icon: 'js', color: '#FF0080', desc: 'Animasi mulus', logoUrl: 'https://cdn.worldvectorlogo.com/logos/framer-motion.svg' },
+  { name: 'React', icon: 'react', color: '#61DAFB', desc: 'Library UI komponen', logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg', url: 'https://react.dev/' },
+  { name: 'Tailwind', icon: 'tailwind', color: '#38B2AC', desc: 'Styling responsif', logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg', url: 'https://tailwindcss.com/' },
+  { name: 'Vite', icon: 'vite', color: '#646CFF', desc: 'Build tool cepat', logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg', url: 'https://vitejs.dev/' },
+  { name: 'React Router', icon: 'react', color: '#CA4245', desc: 'Navigasi SPA', logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/reactrouter/reactrouter-original.svg', url: 'https://reactrouter.com/' },
+  { name: 'Motion', icon: 'js', color: '#FF0080', desc: 'Animasi mulus', logoUrl: 'https://cdn.worldvectorlogo.com/logos/framer-motion.svg', url: 'https://motion.dev/' },
 ]
 
 // --- Tech stack untuk halaman portfolio (dipakai react-icons) ---
