@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'motion/react'
 import { contact } from '../data/profile'
+import GithubContributionGraph from '../components/GithubContributionGraph'
 import { FaWhatsapp, FaPaperPlane } from 'react-icons/fa'
 import { HiMail, HiLocationMarker } from 'react-icons/hi'
 import { Card, CardContent } from '../components/ui/Card'
@@ -98,12 +99,6 @@ export default function Contact() {
             href={`mailto:${contact.email}`}
             glowColor="bg-blue-500"
           />
-          <GlowingContactCard
-            icon={HiLocationMarker}
-            label="Alamat"
-            value={contact.address}
-            glowColor="bg-ember"
-          />
           
           {/* Custom GitHub Profile Component */}
           <motion.a 
@@ -111,12 +106,12 @@ export default function Contact() {
             target="_blank"
             rel="noopener noreferrer"
             variants={itemVariants} 
-            className="group relative mt-auto block w-full overflow-hidden rounded-2xl border border-[#30363d] bg-[#0d1117] text-[#c9d1d9] transition-all duration-300 hover:-translate-y-1 hover:border-[#8b949e] hover:shadow-xl hover:shadow-black/50"
+            className="group relative mt-auto flex-1 flex flex-col w-full overflow-hidden rounded-2xl border border-[#30363d] bg-[#0d1117] text-[#c9d1d9] transition-all duration-300 hover:-translate-y-1 hover:border-[#8b949e] hover:shadow-xl hover:shadow-black/50"
           >
             {/* Ambient glow */}
             <div className="absolute left-1/2 top-1/2 h-40 w-40 -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-500/5 blur-3xl transition-all duration-500 group-hover:bg-blue-500/10 pointer-events-none" />
             
-            <div className="relative z-10 p-5">
+            <div className="relative z-10 flex flex-1 flex-col p-5">
               {/* Avatar & Names */}
               <div className="flex items-center gap-4">
                 <img 
@@ -149,7 +144,7 @@ export default function Contact() {
               </div>
               
               {/* README Snippet */}
-              <div className="mt-5 rounded-lg border border-[#30363d] bg-[#0d1117] p-4 shadow-sm">
+              <div className="mt-auto rounded-lg border border-[#30363d] bg-[#0d1117] p-4 shadow-sm">
                 <p className="mb-2 flex items-center gap-2 text-[11px] font-semibold text-[#8b949e]">
                   Whanss / README.md
                 </p>
@@ -210,21 +205,10 @@ export default function Contact() {
               </button>
             </form>
           </motion.div>
-
-          {/* Maps Interactive Card */}
-          <motion.div variants={itemVariants} className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] p-2 backdrop-blur-sm transition-all hover:border-white/20">
-            <div className="relative overflow-hidden rounded-2xl bg-black/50">
-              <div className="pointer-events-none absolute inset-0 z-10 rounded-2xl ring-1 ring-inset ring-white/10" />
-              <iframe
-                title="Lokasi"
-                src={contact.mapEmbed}
-                className="h-[200px] w-full grayscale transition-all duration-700 hover:grayscale-0 opacity-80 hover:opacity-100"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
+          
+          {/* Animasi Kontribusi GitHub */}
+          <motion.div variants={itemVariants}>
+            <GithubContributionGraph />
           </motion.div>
           
         </div>

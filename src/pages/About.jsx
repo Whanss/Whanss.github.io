@@ -73,7 +73,7 @@ export default function About() {
             {about.intro}
           </p>
           
-          <div className="relative z-10 mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3">
+          <div className="relative z-10 mt-6 grid grid-cols-2 gap-3">
             <div className="flex flex-col justify-center rounded-2xl border border-white/5 bg-black/30 p-3 transition-colors hover:border-ember/20 hover:bg-black/50">
               <p className="text-[10px] uppercase tracking-wider text-bone-muted/70">Prodi</p>
               <p className="mt-1 font-semibold text-bone-light">{profile.program}</p>
@@ -81,10 +81,6 @@ export default function About() {
             <div className="flex flex-col justify-center rounded-2xl border border-white/5 bg-black/30 p-3 transition-colors hover:border-ember/20 hover:bg-black/50">
               <p className="text-[10px] uppercase tracking-wider text-bone-muted/70">Kampus</p>
               <p className="mt-1 text-sm font-semibold text-bone-light">{profile.college}</p>
-            </div>
-            <div className="col-span-2 sm:col-span-1 flex flex-col justify-center rounded-2xl border border-white/5 bg-black/30 p-3 transition-colors hover:border-ember/20 hover:bg-black/50">
-              <p className="text-[10px] uppercase tracking-wider text-bone-muted/70">Kelahiran</p>
-              <p className="mt-1 text-sm font-semibold text-bone-light">{profile.birthDate}</p>
             </div>
           </div>
         </motion.div>

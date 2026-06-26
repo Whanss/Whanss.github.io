@@ -15,7 +15,6 @@ export const profile = {
   nim: 'SI20230016',
   program: 'Sistem Informasi',
   college: 'STMIK Lombok',
-  birthDate: '13 Juni 2004',
   tagline: 'Belajar, membangun, dan terus berkembang.',
   // Path relatif dari public/ — gambar ada di public/img/
   photo: '/img/abcd.jpg',
@@ -26,7 +25,7 @@ export const about = {
   intro:
     'Halo! Saya Nanda. ' +
     'Seorang mahasiswa Sistem Informasi yang antusias dengan dunia ' +
-    'pemrograman dan teknologi. Lahir di Lombok Tengah, 13 Juni 2004.',
+    'pemrograman dan teknologi.',
 
   // Teks lama "Gada pengalaman. kaya nya." → dipoles jadi:
   experience:
@@ -89,9 +88,6 @@ export const contact = {
   whatsapp: '+6282341824547',
   whatsappLink: 'https://wa.me/6282341824547',
   email: 'elyaivanmey@gmail.com',
-  address: 'Jl. Sengkerang, Ganti, Praya Timur, Lombok Tengah',
-  mapEmbed:
-    'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15864.2098221072!2d116.3941169!3d-8.7692893!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcdad940cb8a3fb%3A0xc0088918f2feedd5!2sGanti!5e0!3m2!1sid!2sid!4v1695052069568!5m2!1sid!2sid',
 }
 
 // --- Tautan media sosial ---
